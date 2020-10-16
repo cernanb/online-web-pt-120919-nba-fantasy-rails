@@ -13,6 +13,7 @@ gem 'jbuilder', '~> 2.7'
 gem 'bcrypt', '~> 3.1.7'
 gem 'rack-cors'
 gem 'bootsnap', '>= 1.4.2', require: false
+gem 'rails_same_site_cookie'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
