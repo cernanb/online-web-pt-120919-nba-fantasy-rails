@@ -3,8 +3,8 @@ Rails.application.config.middleware.insert_before 0, Rack::Cors do
     origins 'http://localhost:3000'
     resource '*', headers: :any, methods: [:get, :post, :patch, :put, :delete], credentials: true
   end
-  # allow do
-  #   origins 'https://nba-fantasy-frontend-netlify.com'
-  #   resource '*', headers: :any, methods: [:get, :post, :patch, :put]
-  # end
+  allow do
+    origins 'https://nba-fantasy.netlify.app/'
+    resource '*', headers: :any, methods: [:get, :post, :patch, :put, :delete], credentials: true
+  end
 end
