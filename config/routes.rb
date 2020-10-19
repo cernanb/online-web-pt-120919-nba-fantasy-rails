@@ -5,4 +5,7 @@ Rails.application.routes.draw do
   resources :users, only: [:create]
   get 'logged_in', to: 'sessions#logged_in'
   delete 'logout', to: 'sessions#logout'
+  resources :users do 
+    resources :players, only: [:index]
+  end
 end
