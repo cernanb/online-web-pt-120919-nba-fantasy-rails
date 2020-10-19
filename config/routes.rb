@@ -7,5 +7,6 @@ Rails.application.routes.draw do
   delete 'logout', to: 'sessions#logout'
   resources :users do 
     resources :players, only: [:index]
+    post '/update_player_order', to: 'players#update_player_order'
   end
 end
